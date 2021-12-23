@@ -1,5 +1,5 @@
 {
-  "name": "test-app",
+  "name": "@andykono/test-app",
   "version": "1.0.0",
   "description": "Some test app",
   "main": "index.js",
@@ -9,6 +9,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andykono/test-app.git"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   },
   "author": "",
   "license": "ISC",
