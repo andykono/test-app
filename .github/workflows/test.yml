@@ -13,11 +13,11 @@ jobs:
         node-version: '14.x'
         registry-url: 'https://npm.pkg.github.com'
 
-    - run: |
-        echo "//npm.pkg.github.com/:_authToken=${{secrets.ANDYK_PACKAGES_PAT}}" > $HOME/.npmrc
-        echo "@ironsource:registry=https://npm.pkg.github.com" >> $HOME/.npmrc
-        cat $HOME/.npmrc
+#     - run: |
+#         echo "//npm.pkg.github.com/:_authToken=${{secrets.ANDYK_PACKAGES_PAT}}" > $HOME/.npmrc
+#         echo "@ironsource:registry=https://npm.pkg.github.com" >> $HOME/.npmrc
+#         cat $HOME/.npmrc
 
-    - run: npm publish
+    - run: npm publish --access public
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.ANDYK_PACKAGES_PAT }}
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
