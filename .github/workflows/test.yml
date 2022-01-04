@@ -15,7 +15,7 @@ jobs:
 
     - run: |
         echo "//npm.pkg.github.com/:_authToken=${{secrets.PAKAGES_PAT}}" > $HOME/.npmrc
-        echo "@ironsource:registry=https://npm.pkg.github.com" >> $HOME/.npmrc
+        echo "@andykono:registry=https://npm.pkg.github.com" >> $HOME/.npmrc
         cat $HOME/.npmrc
 
     - run: npm publish --access public
